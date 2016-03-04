@@ -1,0 +1,35 @@
+.widget.widget-rollbar {
+  background-color: #137410;
+  vertical-align: top;
+
+  .project {
+    max-height: 190px;
+    text-align: left;
+    overflow: hidden;
+
+    .name {
+      color: white;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .exception {
+    width: 277px;
+    max-height: 35px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    overflow: hidden;
+
+    .count {
+      display: inline-block;
+      padding: 1px 6px;
+      background-color: white;
+      color: #137410;
+      line-height: 15px;
+      border-radius: 15px;
+    }
+  }
+}

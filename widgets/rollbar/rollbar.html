@@ -1,0 +1,9 @@
+<h1 data-bind="title"></h1>
+
+<div class="project" data-foreach-project="projects">
+  <h3 class="name" data-bind="project.name"></h3>
+  <div class="exception" data-foreach-exception="project.items">
+    <span class="count" data-bind="exception.item.occurrences"></span>
+    <span class="title" data-bind="exception.item.title"></span>
+  </div>
+</div>

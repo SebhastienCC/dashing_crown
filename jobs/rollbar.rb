@@ -1,4 +1,7 @@
 require 'httparty'
+require 'dotenv'
+Dotenv.load
+require 'pry'
 
 module Rollbar
   class Project
@@ -24,6 +27,5 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
     project = Rollbar::Project.new(token)
     { name: project.name, items: project.top_active_items.first(5) }
   end
-
   send_event('rollbar', projects: projects)
 end
