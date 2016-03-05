@@ -23,6 +23,6 @@ require 'oauth2'
 
 
 SCHEDULER.every '30s', :first_in => 0 do |job|
-  auth_token
+  # auth_token
   # send_event('rollbar', projects: projects)
 end
