@@ -4,6 +4,7 @@ Dotenv.load
 require 'pry'
 require 'legato'
 require 'oauth2'
+require_relative "../lib/google_token_factory"
 
 
   def auth_token
@@ -16,7 +17,6 @@ require 'oauth2'
       :redirect_uri => ENV["DOMAIN"],
       :access_type => 'offline'
     })
-    binding.pry
   end
 
 
