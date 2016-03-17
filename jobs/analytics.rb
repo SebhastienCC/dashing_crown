@@ -1,10 +1,10 @@
-# # require 'httparty'
-# require 'dotenv'
-# Dotenv.load
-# require 'pry'
-# require 'legato'
-# require 'oauth2'
-# require_relative "../lib/google_token_factory"
+require 'httparty'
+require 'dotenv'
+Dotenv.load
+require 'pry'
+require 'legato'
+require 'oauth2'
+require_relative "../lib/google_token_factory"
 #
 #
 #   def auth_token
