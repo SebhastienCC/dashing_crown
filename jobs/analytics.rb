@@ -26,7 +26,7 @@ require_relative "../lib/google_token_factory"
 
 
 SCHEDULER.every '30m', :first_in => 0 do |job|
-  binding.pry
+  # binding.pry
   # auth_token
   # send_event('convergence', current: projects)
 end
