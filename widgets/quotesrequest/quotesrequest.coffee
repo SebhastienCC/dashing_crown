@@ -1,4 +1,4 @@
-class Dashing.QuoteRequest extends Dashing.Widget
+class Dashing.Quotesrequest extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
 
   @accessor 'difference', ->
