@@ -28,13 +28,6 @@ require_relative "../lib/google_token_factory"
 
 
 SCHEDULER.every '5s', :first_in => 0 do |job|
-  access_token = GoogleTokenFactory.fetch_access_token_via refresh_token: ENV['REFRESH_TOKEN']
-
-  # service_account_email = 'dashing-crown@dashing-crown.iam.gserviceaccount.com' # Email of service account
-  # key_file = 'secrets/secret.p12' # File containing your private key
-  # key_secret = 'notasecret' # Password to unlock private key
-  # profileID = 'UA-29814427-1'
-  #
   client = Google::APIClient.new(:application_name => 'Dashing Crown',
   :application_version => '0.01')
   analytics = client.discovered_api('analytics','v3')
