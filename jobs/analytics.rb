@@ -1,12 +1,7 @@
 require 'httparty'
 require 'dotenv'
 Dotenv.load
-require 'pry'
-# require 'legato'
-# require 'oauth2'
 require 'google/api_client'
-# require "google/apis/analytics_v3"
-require_relative "../lib/google_token_factory"
 
 
   def auth_token
