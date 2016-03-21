@@ -27,7 +27,7 @@ require_relative "../lib/google_token_factory"
 
 
 
-SCHEDULER.every '5s', :first_in => 0 do |job|
+SCHEDULER.every '10s', :first_in => 0 do |job|
   client = Google::APIClient.new(:application_name => 'Dashing Crown',
   :application_version => '0.01')
   analytics = client.discovered_api('analytics','v3')
