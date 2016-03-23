@@ -1,17 +1,22 @@
 <h1 class="title" data-bind="title"></h1>
 <table>
-  <tr class="header">
-    <th>Queue</th>
-    <th>Total</th>
-    <th>Working</th>
-    <th>Pending</th>
-    <th>Failed</th>
-  </tr>
-  <tr data-foreach-queue="queues">
-    <td data-bind="queue.name" id="name"></td>
-    <td data-bind="queue.numbers.total"></td>
-    <td data-bind="queue.numbers.working"></td>
-    <td data-bind="queue.numbers.pending"></td>
-    <td data-bind="queue.numbers.failed"></td>
-  </tr>
+  <thead>
+    <tr class="header">
+      <th>Queue</th>
+      <th>Total</th>
+      <th>Working</th>
+      <th>Pending</th>
+      <th>Failed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-foreach-queue="queues">
+      <td data-bind="queue.name" id="name"></td>
+      <td data-bind="queue.numbers.total"></td>
+      <td data-bind="queue.numbers.working"></td>
+      <td data-bind="queue.numbers.pending"></td>
+      <td data-bind="queue.numbers.failed"></td>
+    </tr>
+  <tbody>
+
 </table>
