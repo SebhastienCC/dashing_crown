@@ -22,10 +22,11 @@ module Rollbar
   end
 end
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
+SCHEDULER.every '10s', :first_in => 0 do |job|
   projects = ENV["ROLLBAR_TOKENS"].split(",").map do |token|
     project = Rollbar::Project.new(token)
     { name: project.name, items: project.top_active_items.first(5) }
   end
+  # binding.pry
   send_event('rollbar', projects: projects)
 end
