@@ -1,6 +1,6 @@
 <h1 class="title" data-bind="title"></h1>
 <table>
-  <tr>
+  <tr class="header">
     <th>Queue</th>
     <th>Total</th>
     <th>Working</th>
@@ -8,7 +8,7 @@
     <th>Failed</th>
   </tr>
   <tr data-foreach-queue="queues">
-    <td data-bind="queue.name"></td>
+    <td data-bind="queue.name" id="name"></td>
     <td data-bind="queue.numbers.total"></td>
     <td data-bind="queue.numbers.working"></td>
     <td data-bind="queue.numbers.pending"></td>
