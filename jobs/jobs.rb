@@ -8,7 +8,7 @@ def authenticate
   token = CrownAuthenticate.new().token
 end
 
-SCHEDULER.every '5m', :first_in => 0 do |job|
+SCHEDULER.every '15', :first_in => 0 do |job|
   queues = HTTParty.get "https://#{ENV['CROWN_DOMAIN']}/v1/reports/delayed_jobs?authentication_token=#{authenticate}"
   array = []
   queues.keys.each do |key|
