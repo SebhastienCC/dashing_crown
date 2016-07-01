@@ -10,7 +10,7 @@ end
 
 
 SCHEDULER.every '1m', :first_in => 0 do |job|
-  form_submissions = filter("11102")
+  form_submissions = filter("10620")
   send_event( "inbox", current: form_submissions["issues"].count )
   body = filter("12502")
 
