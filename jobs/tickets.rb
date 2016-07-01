@@ -2,7 +2,7 @@ require "httparty"
 require "pry"
 
 def filter(id)
-  auth = { :username => "mthompson", :password => "m200266756" }
+  auth = { :username => "echoi", :password => "iloveteddie93" }
   res  = HTTParty.get "https://crownandcaliber.atlassian.net/rest/api/2/filter/#{id}", :basic_auth => auth
   body = HTTParty.get "#{res["searchUrl"]}&maxResults=500", :basic_auth => auth
 end
