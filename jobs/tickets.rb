@@ -14,7 +14,7 @@ SCHEDULER.every '1m', :first_in => 0 do |job|
   send_event( "inbox", current: form_submissions["issues"].count )
   body = filter("10802")
 
-  %w(mthompson bcase yliu).each do |username|
+  %w(mthompson bcase yliu sbayona echoi).each do |username|
     # binding.pry
     res = body["issues"].select { |x| x["fields"]["assignee"]["name"] == username }
     send_event( username, current: res.count )
