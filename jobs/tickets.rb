@@ -12,7 +12,7 @@ end
 SCHEDULER.every '1m', :first_in => 0 do |job|
   form_submissions = filter("11102")
   send_event( "inbox", current: form_submissions["issues"].count )
-  body = filter("10802")
+  body = filter("11305")
 
   %w(mthompson bcase yliu sbayona echoi).each do |username|
     # binding.pry
