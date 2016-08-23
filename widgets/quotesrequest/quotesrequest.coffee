@@ -1,5 +1,6 @@
 class Dashing.Quotesrequest extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
+  @accessor 'currentUnprocessed', Dashing.AnimatedValue
 
   @accessor 'difference', ->
     if @get('last')
